@@ -1,5 +1,5 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, Dai Ca 10 diem ");
+        System.out.println(" Hello, JavaOOP! ");
     }
 }
