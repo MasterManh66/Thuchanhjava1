@@ -1,3 +1,4 @@
+package src;
 public class App51 {
     public static void main(String[] args) {
         int i = 0;

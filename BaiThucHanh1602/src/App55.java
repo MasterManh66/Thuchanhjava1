@@ -1,3 +1,5 @@
+package src;
+
 public class App55 {
     public static void main(String[] args) {
         int i;

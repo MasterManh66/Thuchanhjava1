@@ -1,35 +1,31 @@
+package src;
+
 import java.util.Scanner;
 
 public class App40 {
     public static void main(String[] args) {
-     int ngay;
-     Scanner m = new Scanner(System.in);
-     ngay = m.nextInt();
-     
-     System.out.println(" Nhap so ngay tu 2 -> 8 !!!");
-     switch (ngay) {
-        case 2 :
-            System.out.println(" Thu Hai ");             
-            break;
-        case 3 :
-            System.out.println(" Thu Ba ");
-            break;
-        case 4 :
-            System.out.println(" Thu Tu ");
-            break;
-        case 5 : 
-            System.out.println(" Thu Nam ");
-            break;
-        case 6 : 
-            System.out.println(" Thu Sau ");
-            break;
-        case 7 : 
-            System.out.println(" Thu Bay ");
-            break;
-        case 8 :
-            System.out.println(" Chu Nhat ");
-            break;
-        default: System.out.println(" So khong thuoc cac ngay trong tuan !!!");    
-     }
+        System.out.println("Nhập số số ngày: ");
+        try (Scanner sc = new Scanner(System.in)) {
+            {
+              int ngay = sc.nextInt();
+              switch(ngay){
+              case 0:System.out.println("Thứ hai");
+                break;
+              case 1:System.out.println("Thứ ba");
+                break;
+              case 2:System.out.println("Thứ tư");
+                break;
+              case 3:System.out.println("Thứ năm");
+                break;
+              case 4:System.out.println("Thứ sáu");
+                break;
+              case 5:System.out.println("Thứ bảy");
+                break;
+              case 6:System.out.println("Chủ nhật");
+                break;
+                default:System.out.println("Số ngày trong tuần sai");
+              }
+            }
+        }
     }
 }

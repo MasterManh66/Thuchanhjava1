@@ -1,8 +1,6 @@
 package src;
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner14;
-
 public class App1 {
     public static void main(String[] args) {
         double a,b,c;
