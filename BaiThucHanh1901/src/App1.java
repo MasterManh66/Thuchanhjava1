@@ -5,14 +5,14 @@ public class App1 {
     public static void main(String[] args) {
         double a,b,c;
 
-        Scanner m = new Scanner(System.in);
-        System.out.print("Nhap he so a : ");
-        a = m.nextDouble();
-        System.out.print("Nhap he so b : ");
-        b = m.nextDouble();
-        System.out.print("Nhap he so c : ");
-        c = m.nextDouble();
-        
+        try (Scanner m = new Scanner(System.in)) {
+            System.out.print("Nhap he so a : ");
+            a = m.nextDouble();
+            System.out.print("Nhap he so b : ");
+            b = m.nextDouble();
+            System.out.print("Nhap he so c : ");
+            c = m.nextDouble();
+        }
         double delta = Math.pow(b, 2) - 4*a*c;
         double sqrt = Math.sqrt(delta);
 
