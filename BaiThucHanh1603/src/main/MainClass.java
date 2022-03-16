@@ -1,6 +1,5 @@
 package main;
-
-import shapes.HinhchuNhat;
+import shapes.HinhChuNhat;
 import shapes.HinhTron;
 
 public class MainClass {
@@ -11,7 +10,7 @@ public class MainClass {
         HinhChuNhat hinhChuNhat = new HinhChuNhat();
 
         //Nhập dữ liệu vào cho hinhTron , tính chu vi , diện tích
-        hinhTron.nhapBanKinh();
+        hinhTron.NhapBanKinh();
         hinhTron.tinhChuVi();
         hinhTron.inChuVi();
         hinhTron.inDienTich();

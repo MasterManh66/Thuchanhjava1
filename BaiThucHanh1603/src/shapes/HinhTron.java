@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class HinhTron{
     
         final float PI = 3.14f;
-
         float r;
         float cv;
         float dt;
@@ -13,22 +12,20 @@ public class HinhTron{
                 System.out.println("Nhap Ban kinh duong tron : ");
                 r = m.nextFloat();
             }
-        
-
-        void tinhChuVi(){
+        public void tinhChuVi()
+        {
             cv = 2 * PI * r;
         }
-
-        void tinhDienTich(){
+        public void tinhDienTich()
+        {
             dt = PI * r * r ;
         }
-
-        void inChuVi(){
+        public void inChuVi()
+        {
             System.out.println("Chu vi Hinh tron : " + cv);
         }
-
-        void inDienTich(){
+        public void inDienTich()
+        {
             System.out.println("Dien tich Hinh tron : " + dt);
         }
-    
 }
