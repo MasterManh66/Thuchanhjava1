@@ -6,7 +6,7 @@ public class App72 {
         SinhVien sinhVien2 = new SinhVien();
         sinhVien1.setTen("");
         sinhVien1.setTuoi(23);
-        sinhVien2.setTen("Huy Hoang");
+        sinhVien2.setTen("Manh Tran");
         sinhVien2.setTuoi(17);
         System.out.println("Sinh viên 1 có tên : " + sinhVien1.getTen() + ", tuổi: " + sinhVien1.getTuoi());
         System.out.println("Sinh viên 2 có tên : " + sinhVien2.getTen() + ", tuổi: " + sinhVien2.getTuoi());
