@@ -1,34 +1,57 @@
 package Shape;
 import java.util.Scanner;
 public class Triangle extends Point {
-    int a,b,c;
-    //Nhập 3 cạnh tam giác
-    Scanner sc = new Scanner(System.in);
-    public void Nhap()
-    {
-        System.out.println("Nhập cạnh a : ");
-        a = sc.nextInt();
-        System.out.println("Nhập cạnh b : ");
-        b = sc.nextInt();
-        System.out.println("Nhập cạnh c : ");
-        c = sc.nextInt();
-    }
-    public void test()
-    {
-        if(a+b>c && b+c>a && c+a>b)
-        {
-            System.out.println("a,b,c la ba canh cua tam giac !!! ");
-            if( a == b && b == c )
-            System.out.println("Day la tam giac deu !!!");
-            if( a==b || b == c || c == a)
-            System.out.println("Day la tam giac can !!!");
-    
-        }
+  private Double hoanhDoDiemThuNhat;
+  private Double hoanhDoDiemThuHai;
+  private Double hoanhDoDiemThuBa;
+  private Double tungDoDiemThuNhat;
+  private Double tungDoDiemThuHai;
+  private Double tungDoDiemThuBa;
+
+  public void nhapDiem() 
+  {
+    System.out.println("---Nhap diem thu nhat---");
+    System.out.print("Nhap hoanh do: ");
+    hoanhDoDiemThuNhat = sc.nextDouble();
+    System.out.print("Nhap tung do: ");
+    tungDoDiemThuNhat = sc.nextDouble();
+    System.out.println("---Nhap diem thu hai---");
+    System.out.print("Nhap hoanh do: ");
+    hoanhDoDiemThuHai = sc.nextDouble();
+    System.out.print("Nhap tung do: ");
+    tungDoDiemThuHai = sc.nextDouble();
+    System.out.println("---Nhap diem thu ba---");
+    System.out.print("Nhap hoanh do: ");
+    hoanhDoDiemThuBa = sc.nextDouble();
+    System.out.print("Nhap tung do: ");
+    tungDoDiemThuBa = sc.nextDouble();
+  }
+
+  public void kiemTraTamGiac() 
+  {
+    Double a; // Độ dài điểm thứ nhất đến thứ hai
+    Double b; // Độ dài điểm thứ hai đến thứ ba
+    Double c; // Độ dài điểm thứ ba đến thứ nhất
+    a = Math.sqrt(
+        Math.pow(hoanhDoDiemThuHai - hoanhDoDiemThuNhat, 2) + Math.pow(tungDoDiemThuHai - tungDoDiemThuNhat, 2));
+    b = Math
+        .sqrt(Math.pow(hoanhDoDiemThuBa - hoanhDoDiemThuHai, 2) + Math.pow(tungDoDiemThuBa - tungDoDiemThuHai, 2));
+    c = Math.sqrt(
+        Math.pow(hoanhDoDiemThuNhat - hoanhDoDiemThuBa, 2) + Math.pow(tungDoDiemThuNhat - tungDoDiemThuBa, 2));
+    if (a + b <= c || a + c <= b || c + b <= a)
+      System.out.println("Day khong phai la mot tam giac ! ");
+    else{
+      if (a == b && b == c)
+        System.out.println("Day la tam giac deu ! ");
+      else if (a == b || b == c || c == a) {
+        if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a)
+          System.out.println("Day la tam giac vuong can ! ");
         else
-            {
-                System.out.println("Khong la 3 canh cua tam giac !!! ");
-            }
-        if(a*a==b*b+c*c || b*b==a*a+c*c || c*c==a*a+b*b)
-               System.out.println("La tam giac vuong !!!"); 
+          System.out.println("Day la tam giac can ");
+      } else if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a)
+        System.out.println("Day la tam giac vuong ! ");
+      else
+        System.out.println("Day la tam giac thuong ! ");
     }
+  }
 }

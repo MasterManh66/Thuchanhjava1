@@ -20,17 +20,19 @@ public class App2604 {
             int luachon = sc.nextInt();
             if( luachon == 1 )
             {
-                 p.nhap();
-                 p.in();
+                p.nhapDiem();
+                 p.inDiem();
+ 
             }
             else if ( luachon == 2 )
             {
-                 t.Nhap();
-                 t.test();
+                t.nhapDiem();
+                t.kiemTraTamGiac();
             }
             else if ( luachon == 3 )
             {
-                q.kiemtra();
+                q.nhapDiem();
+                q.kiemTraTuGiac();
             }
             else if ( luachon == 4 )
             {
