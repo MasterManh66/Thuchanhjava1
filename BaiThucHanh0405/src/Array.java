@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class App {
+public class Array {
     public static void main(String[] args) throws Exception {
         //dùng for thường
 
